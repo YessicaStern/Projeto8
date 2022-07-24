@@ -1,9 +1,14 @@
 import Start from "./Start";
+import Questions from "./Questions";
+import Concluded from "./Concluded";
 
 
 function Contents(){
     return (
-    <div><Start/></div>);
+    <div><Start/>
+    <Questions/>
+    <Concluded/>
+    </div>);
 
 }
 

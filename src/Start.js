@@ -1,10 +1,16 @@
+import React from "react";
+import Questions from "./Questions";
+
 function Start(){
+    const [hideStart,setHideStart]=React.useState("start");
+    
     return (
-    <div className="start">
-        <img src="./img/logo.png" className="iconStart"/>
+    <div className={hideStart}>
+        <img src="./img/logo.png" className="logoStart"/>
         <h1>ZapRecall</h1>
-        <button className="buttonStart"><h2>Iniciar Recall!</h2></button>
+        <button className="buttonStart" onClick={()=>{setHideStart("hide")}}><h2>Iniciar Recall!</h2></button>
     </div>)
+    
 }
 
 export default Start;

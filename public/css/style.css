@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500;600;700;800;900&family=Righteous&display=swap');
+/*font-family: 'Recursive', sans-serif;
+font-family: 'Righteous', cursive;*/
+
 *{box-sizing: border-box;}
 
-
+.hide{
+    display: none;
+}
 body{
     background-color: pink;
     margin: auto;
@@ -16,8 +22,10 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content:center;
+    z-index: 10;
+    position: absolute;
 }
-.iconStart{
+.logoStart{
     width: 136px;
     height: 161px;
     margin-top: -50px;
@@ -32,7 +40,7 @@ body{
     margin-top: 40px;
 }
 .start h1{
-    /*********** fonte aqui ************/
+    font-family: 'Righteous';
     font-style: normal;
     font-weight: 400;
     font-size: 36px;
@@ -42,10 +50,95 @@ body{
     margin-top: 15px;
 }
 .buttonStart h2{
-    font-style: normal;
+    font-family: 'Recursive', sans-serif;
     font-weight: 400;
     font-size: 18px;
     text-align: center;
     color: #D70900;
     cursor: pointer;
 }
+
+
+
+
+
+.smallLogo{
+    width: 52px;
+    height: 60px;
+    margin-top: -10px;
+    margin-right: 20px;
+}
+.questions{
+    width: 375px;   
+    height: 667px;
+    background-color: #FB6B6B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    bottom: 0;
+    z-index: 9;
+}   
+.questions .top{
+    display: flex;
+    margin: 50px auto 60px auto ;
+}
+.question{
+    width: 300px;
+    height: 65px;   
+    border-radius: 5px;    
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.question h2{
+    font-family: 'Recursive', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #333333;    
+}
+.question ion-icon{
+    font-size: 150%;
+}
+.questions h1{ 
+    font-family: 'Righteous';
+    font-weight: 400;
+    font-size: 36px;
+    letter-spacing: -0.012em;
+    color: #FFFFFF;
+}
+
+
+
+
+.concluded{
+    width: 375px;
+    height: 70px;
+    background-color: #FFFFFF;
+    z-index: 9;
+    position:relative;
+    bottom: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.concluded h2{
+    font-family: 'Recursive', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #333333;
+}
+
+
+
+/*
+
+<div className="questionsTemplate"></div>
+         {question.map((itens, index)=>(<div class={hide} key={index} ><h2>{itens}</h2><ion-icon onClick={()=>{if(hide==="question"){setHide("hide");alert(index)}}} name="play-outline" className=".iconOpenQuestion"></ion-icon></div>))}
+     </div>
+
+
+*/
