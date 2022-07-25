@@ -3,48 +3,66 @@ import React from "react";
 function Question(props){
     const [hide,setHide]=React.useState("question");
     const [show,setShow]=React.useState("hide");
-    const [fix,setFix]=React.useState(props.fixed);
+    // const [fix,setFix]=React.useState(props.fixed);
     const [backCard, SetBackCard]=React.useState("hide")
-    // const [count,setCount]=React.useState(0);
+    const [nameIcon, SetNameIcon]=React.useState("play-outline");
+    const [nameClass,SetNameClass]= React.useState("")
+    const [questClass,setQuestClass]=React.useState("questionColor")
+    const [count,setCount]=React.useState(0);
     
-    // if(count==1){
-    //     setCount=0;
-    //     console.log("funciona");
-    // colocar pra deixar fixo aqui
-    // }
+    console.log("props count =="+ props.countQuest);
+    
     // if(fix !== props.fixed){
     //     console.log("click");
     //     console.log(count);
         
     // }  
 
-    function questSelected(props){
+    function questSelected(){
+        if(count==0){
         setHide("hide");
         setShow("card");
-        console.log("key = "+ props.index, "id="+props.number);
-        props.fixed= !fix;
-        setFix(props.fixed);
-        console.log(props.fixed);
-        // setCount(count+1);   
+        console.log("key = "+ props.index, "id="+props.number, props);
+        //console.log(props.countQuest);
+        // props.fixed= !fix;
+        // setFix(props.fixed);
+        // console.log(props.fixed);
+         setCount(count+1);} 
     }
     function teste(){
+        setCount(count+1);
         console.log("deu bom");
         SetBackCard("card");
         setShow("hide");
     }
     function forget(){
-        console.log("não lembrei");
+        SetNameIcon("close-circle");
+        setHide("question");
+        setShow("hide");
+        SetBackCard("hide");
+        SetNameClass("my hydrated iconRed");
+        setQuestClass("riskRed iconRed");
     }
     function almostForget(){
-        console.log("quase não lemnro");
+        SetNameIcon("help-circle");
+        setHide("question");
+        setShow("hide");
+        SetBackCard("hide");
+        SetNameClass("my hydrated iconOrange");
+        setQuestClass("riskRed iconOrange");
     }
     function remember(){
-        console.log("lembrei");
+        SetNameIcon("chevron-down-circle");
+        setHide("question");
+        setShow("hide");
+        SetBackCard("hide");
+        SetNameClass("my hydrated iconGreen");
+        setQuestClass("riskRed iconGreen");
     }
 
     return(
     <>
-    <div className={hide} key={props.index}><h2>Pergunta {props.index +1}</h2><ion-icon onClick={questSelected} name="play-outline" className=".iconOpenQuestion"></ion-icon></div>
+    <div className={hide} key={props.index}><h2 className={questClass}>Pergunta {props.index +1}</h2><ion-icon onClick={questSelected} name={nameIcon} class={nameClass}></ion-icon></div>
     <div className={show} ><h3>{props.quest}</h3><img className="iconArrowuCurve" src="./img/icon.svg" onClick={teste}/></div> 
     <div className={backCard} ><h3>{props.response}</h3>
         <div className="response">
@@ -58,16 +76,16 @@ function Question(props){
 
 
 
-function Questions(){
+function Questions({countQuest,setCountQuest}){
       const question=[{number:11, quest:"O que é JSX?", response: "Uma extensão de linguagem do JavaScript", fixed:false},
             {number:22, quest:"O que é JSX?", response: "Uma extensão de linguagem do JavaScript", fixed:false},
             {number:33, quest:"O que é JSX?", response: "Uma extensão de linguagem do JavaScript", fixed:false},
             {number:44, quest:"O que é JSX?", response: "Uma extensão de linguagem do JavaScript", fixed:false}];
-      
+      console.log(countQuest);
     return( 
      <div className="questions">
           <div className="top"><img src="./img/logo.png" className="smallLogo"/> <h1>ZapRecall</h1></div>
-         {question.map((itens,index)=>(<Question quest={itens.quest} number={itens.number} fixed={itens.fixed} response={itens.response} index={index} />))}
+         {question.map((itens,index)=>(<Question countQuest={countQuest} setCountQuest={setCountQuest} quest={itens.quest} number={itens.number} fixed={itens.fixed} response={itens.response} index={index} />))}
      </div>
     )
 }

@@ -1,4 +1,4 @@
-import { useState,React } from "react";
+import React  from "react";
 
 import Start from "./Start";
 import Questions from "./Questions";
@@ -7,11 +7,12 @@ import Concluded from "./Concluded";
 
 
 function Contents(){
-
+    
+    const[countQuest,setCountQuest]=React.useState(0);
 
     return (
     <div><Start/>
-    <Questions/>
+    <Questions countQuest={countQuest} setCountQuest={setCountQuest}/>
     <Concluded/>
     </div>);
 

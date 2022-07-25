@@ -104,6 +104,8 @@ body{
     font-family: 'Recursive', sans-serif;
     font-weight: 700;
     font-size: 16px;
+}
+.questionColor{
     color: #333333;    
 }
 .question ion-icon{
@@ -180,9 +182,18 @@ body{
     color: #FFFFFF;    
 }
 
-
-
-
+.iconRed{
+    color: #D70900;
+}
+.iconOrange{
+    color: orange;
+}
+.iconGreen{
+    color: #2FBE34;
+}
+.riskRed{
+    text-decoration: line-through;
+}
 
 
 
