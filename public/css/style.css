@@ -22,7 +22,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content:center;
-    z-index: 1;
+    z-index: 10;
     position: absolute;
 }
 .logoStart{
@@ -256,4 +256,5 @@ ion-icon[name="chevron-down-circle"] {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #FFFFFF;
 }

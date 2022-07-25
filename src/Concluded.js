@@ -6,6 +6,9 @@ function Concluded({countQuest,countType}){
     let image;
     let title;
     let classeButton="hide";
+    function Reload(){
+        window.location.reload();
+    }
     if(countType.length===4){
      
         if(countType.includes("close-circle")){
@@ -25,10 +28,8 @@ function Concluded({countQuest,countType}){
             <h2>{countQuest}/4 CONCLUÍDOS</h2> 
         <div><h5>{message}</h5>
              <div className="icons">{countType.map((type)=>{return (<ion-icon name={type}></ion-icon>);})} </div>
-             <div className={classeButton}><h5>REINICIAR RECALL</h5></div>
-        </div>
-
-        
+             <div className={classeButton} onClick={Reload}><h5>REINICIAR RECALL</h5></div>
+        </div> 
         </div>
     )
 }
