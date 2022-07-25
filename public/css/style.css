@@ -211,7 +211,7 @@ ion-icon[name="chevron-down-circle"] {
 .concluded{
     width: 375px;
     min-height: 70px;
-    bottom: 70px;
+    bottom: 78px;
     background-color: #FFFFFF;
     z-index: 9;
     position:relative;
@@ -256,5 +256,10 @@ ion-icon[name="chevron-down-circle"] {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #FFFFFF;
+    margin-left: 90px;
+}
+.button h5{
+    text-align: center;
     color: #FFFFFF;
 }

@@ -9,8 +9,8 @@ function Questions({countQuest,setCountQuest, countType,setCountType}){
 
             question.sort(comparador);
             function comparador() { 
-                return Math.random() - 0.5; 
-            }
+	return Math.random() - 0.5; 
+}
       
     return( 
      <div className="questions">
