@@ -1,5 +1,4 @@
 import React from "react";
-import Questions from "./Questions";
 
 function Start(){
     const [hideStart,setHideStart]=React.useState("start");

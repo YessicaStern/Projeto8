@@ -22,7 +22,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content:center;
-    z-index: 10;
+    z-index: 1;
     position: absolute;
 }
 .logoStart{
@@ -62,6 +62,9 @@ body{
 
 
 
+
+
+
 .smallLogo{
     width: 52px;
     height: 60px;
@@ -78,6 +81,9 @@ body{
     position: relative;
     bottom: 0;
     z-index: 9;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    padding-bottom: 70px;
 }   
 .questions .top{
     display: flex;
@@ -114,6 +120,74 @@ body{
 
 
 
+
+
+
+
+.card{
+    height: 131px;
+    width: 299px;
+    border-radius: 5px;
+    background-color: #FFFFD5;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+    padding:15px
+    /* transition: all 1s linear;
+    transform: rotateY(180deg); */
+}
+.card h3 {
+    font-family: 'Recursive',sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+}
+.iconArrowuCurve{
+    margin-left: 240px;
+    margin-top: 60px;
+}
+.red,.orange,.green{
+    width: 85.17px;
+    height: 37.17px;
+    border-radius: 5px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.red{
+    background: #FF3030;
+}
+.orange{
+    background: #FF922E;
+}
+.green{
+    background: #2FBE34;
+
+}
+.response{
+    display: flex;
+    justify-content: space-between;
+}
+.response h4{
+    font-family: 'Recursive',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;    
+}
+
+
+
+
+
+
+
+
+
 .concluded{
     width: 375px;
     height: 70px;
@@ -132,13 +206,3 @@ body{
     color: #333333;
 }
 
-
-
-/*
-
-<div className="questionsTemplate"></div>
-         {question.map((itens, index)=>(<div class={hide} key={index} ><h2>{itens}</h2><ion-icon onClick={()=>{if(hide==="question"){setHide("hide");alert(index)}}} name="play-outline" className=".iconOpenQuestion"></ion-icon></div>))}
-     </div>
-
-
-*/
