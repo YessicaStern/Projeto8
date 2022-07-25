@@ -9,11 +9,12 @@ import Concluded from "./Concluded";
 function Contents(){
     
     const[countQuest,setCountQuest]=React.useState(0);
+    const[countType,setCountType]=React.useState([]);
 
     return (
     <div><Start/>
-    <Questions countQuest={countQuest} setCountQuest={setCountQuest}/>
-    <Concluded/>
+    <Questions countQuest={countQuest} setCountQuest={setCountQuest} countType={countType} setCountType={setCountType}/>
+    <Concluded countQuest={countQuest} countType={countType}/>
     </div>);
 
 }
